@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+
+    <script src="https://kit.fontawesome.com/f54bfa40f7.js" crossorigin="anonymous"></script>
+
+    <style>
+
+      body{
+        background-color: black;
+      }
+
+      /* class */
+      .line-height1{
+        line-height: 27px;
+      }
+      /* class */
+
+
+      header{
+        height: 100vh;
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)) , url(https://images.unsplash.com/photo-1513491714241-33805f8ff175?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+
+      .line-height-1{
+        line-height: 32px;
+      }
+
+      .my-navbar{
+        background: linear-gradient(rgba(0,0,0,0.2) , rgba(0,0,0,0.5));
+      }
+
+      .myBanner{
+        width: 90%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-47% , -50%);
+      }
+
+      .responsive-banner-par{
+          font-size: 21px;
+        }
+
+      .my-about-img{
+        width: 470px;
+        height: 600px;
+        image-rendering: pixelated;
+      }
+
+      .my-features-cards{
+        transition: all 0.3s;
+      }
+
+      .my-features-cards:hover{
+        transform: translateY(-11px)
+      }
+
+      .card-background{
+        border-radius: 10px;
+        background: linear-gradient(rgba(0,0,0,0.6) , rgba(0,0,0,0.9)) , url(https://images.unsplash.com/photo-1554679665-f5537f187268?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
+        background-size: cover;
+        background-position: center;
+        box-shadow: 3px 6px 10px rgba(0,0,0,.4);
+        transition: all 0.3s; 
+      }
+    
+      /* .card-background:hover{
+        transform: translateY(-11px);
+      } */
+
+
+      .address-background{
+        height: 100vh;
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)) , url(https://d33wubrfki0l68.cloudfront.net/2b44292406de53564def263a6e986431b32a8163/70618/assets/img/snz.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;  
+        margin-top: 7.5rem; 
+      }
+
+      .my-address-card{
+        background: linear-gradient(#303030, #000);
+        margin-top: -7.5rem; 
+        box-shadow: 2px 4px 10px rgba(0, 0, 0, .4);
+        border-radius: 12px;
+      }
+
+      .my-email-section{
+        height: 60vh;
+        background: linear-gradient(rgba(0,0,0,0.5) , rgba(0,0,0,0.8)) , url(https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .email-input{
+        font-family: sans-serif;
+        font-size: 20px;
+        color: white;
+        background-color: #000;
+        padding: 2rem;
+      }
+
+      .email-input-style{
+        font-family: sans-serif;
+        font-size: 19px;
+        color: white;
+        background-color: #000;
+        padding-bottom: 2.9rem;
+        padding-top: 0.9rem;
+      }
+
+      @media(max-width:990px) {
+
+        header{
+        height: 100vh;
+        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)) , url(https://images.unsplash.com/photo-1578474846511-04ba529f0b88?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        }
+
+        .responsive-banner{
+          font-size: 2.5rem;
+        }
+
+        .responsive-banner-par{
+          font-size: 18px; 
+        }
+
+        .btn-display{
+          display: none;
+        }
+
+        .responsive-color{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        .card-background , .my-features-cards{
+          transform: translateY(0px);
+        }
+
+        }
+        
+        @media(max-width : 1150px){
+        .my-about-img{
+          width: 300px;
+          height: 415px;
+        }
+        }
+
+    </style>
+  
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark my-navbar fixed-top">
+       <img src="https://d33wubrfki0l68.cloudfront.net/deafe47e0ea96b853fe7b4131a5674263f601ec2/1d342/assets/img/crown.png" width="56px" class="navbar-brand ml-0 ml-lg-5" alt="">
+       <button class="navbar-toggler" data-toggle="collapse" data-target="#my-navbar">
+        <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="my-navbar">
+        <ul class="navbar-nav list-unstyled ml-auto responsive-color">
+          <li class="nav-item">
+            <a class="nav-link text-white my-4 my-lg-0 ml-0 ml-lg-5" style="font-size: 1.1rem; font-style: italic;" href="#Home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white my-4 my-lg-0 ml-0 ml-lg-5" style="font-size: 1.1rem; font-style: italic;" href="#Menu">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white my-4 my-lg-0 ml-0 ml-lg-5" style="font-size: 1.1rem; font-style: italic;" href="#About">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white my-4 my-lg-0 ml-0 ml-lg-5 mr-0 mr-lg-5" style="font-size: 1.1rem; font-style: italic;" href="#Contact">Contact</a>
+          </li>
+        </ul>
+       </div>
+      </nav>
+      <!-- End of Navbar -->
+      <!-- Banner -->
+      <div class="container-fluid" id="Home">
+        <div class="row myBanner">
+          <div class="col-12 text-white text-center">
+            <h1 class="display-3 font-weight-bold text-uppercase responsive-banner">Delicious Food</h1>
+            <p class="responsive-banner-par my-4">Crown is a restaurant, bar and coffee roastery located on London</p>
+             <button class="btn btn-lg font-weight-bold px-4 py-3 my-4" style="background-color: #ffd71b">ORDER ONLINE</button>
+            </div>
+        </div>
+      </div>
+    </header>
+    <!-- End of Banner -->
+
+    <!-- About -->
+    <section  class="p-2 p-lg-5" id="About">
+      <div class="container-fluid p-2 p-lg-5 ">
+        <div class="row my-5">
+          <div class="col-12 col-lg-7 text-white align-content-center">
+            <h5 class="text-warning">WHY US</h5>
+            <h1 class="my-3 mb-5 font-weight-bold">Serving you great time</h1>
+            <p>Our mission is to give our customers a place to celebrate life’s special moments by offering the best food, service, and ambiance. 
+             The smile on our customers face has always been our first priority and we work hard to achieve that.
+            </p>
+            <p class="mt-4 my-5 my-lg-0">
+              Established in 1982, We aim to keep going forever and bring happiness to your life
+            </p>
+            <button class="btn btn-lg font-weight-bold px-4 py-3 my-5 btn-display" style="background-color: #ffd71b;">OUR STORY</button>
+          </div>
+          <div class="col-12 col-lg-5 text-center">
+            <img src="https://images.unsplash.com/photo-1546070397-5e4f1d92c204?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=632&q=80" class="rounded my-about-img" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of About -->
+
+    <!-- Features -->
+    <section class="p-5" id="Menu">
+      <div class="container-fluid" >
+        <!-- Title -->
+        <div class="row justify-content-center text-center">
+          <div class="col-12">
+            <h5 class="text-warning my-2">EXPLORE</h5>
+            <h1 class="text-white mb-4 font-weight-bold">MENU FEATURES</h1>
+          </div>
+        </div>
+        <!-- End of Title -->
+        <div class="row p-0 p-lg-4">
+          <div class="col-12 col-lg-4 p-0 p-lg-4 my-4 my-lg-0 my-features-cards">
+            <div class="card" style="background-color: #222; box-shadow:0 0 10px rgba(0, 0, 0, 0.7);">
+              <div class="card-body text-white my-5">
+                <img src="https://d33wubrfki0l68.cloudfront.net/604d708f53cf3d99401db908b05e12c2776d67c3/6bbb7/assets/img/salad-white.png" width="70px" alt="">
+                <h4 class="my-3 font-weight-bold">Always Fresh</h4>
+                <p class="text-muted line-height-1">We focus on serving fresh food always. Fresh food is always best for your
+                  precious body and we keep that in mind and that's why we like to serve everything fresh
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 p-0 p-lg-4 my-4 my-lg-0 my-features-cards">
+            <div class="card" style="background-color: #222; box-shadow:0 0 10px rgba(0, 0, 0, 0.7);">
+              <div class="card-body text-white my-5">
+                <img src="https://d33wubrfki0l68.cloudfront.net/604d708f53cf3d99401db908b05e12c2776d67c3/6bbb7/assets/img/salad-white.png" width="70px" alt="">
+                <h4 class="my-3 font-weight-bold">Amazing Taste</h4>
+                <p class="text-muted line-height-1">Serving tasty food has always been our first priority and also to make sure the
+                 taste is constant everytime you consume, you will see no difference in taste
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 p-0 p-lg-4 my-4 my-lg-0 my-features-cards">
+            <div class="card" style="background-color: #222; box-shadow:0 0 10px rgba(0, 0, 0, 0.7);">
+              <div class="card-body text-white my-5">
+                <img src="https://d33wubrfki0l68.cloudfront.net/604d708f53cf3d99401db908b05e12c2776d67c3/6bbb7/assets/img/salad-white.png" width="70px" alt="">
+                <h4 class="my-3 font-weight-bold">Premium Ingredients</h4>
+                <p class="text-muted line-height-1">We know great ingredients are must to take the taste and health on next level so
+                  that's why we focus on using oragnic ingredients so you don't have to worry
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center ">
+          <div class="col-12 text-center">
+            <button class="btn btn-lg font-weight-bold px-5 py-3 mt-4" style="background-color: #ffd71b">MENU</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Features -->
+
+    <!-- Cards -->
+    <section class="py-5">
+      <div class="container-fluid py-4" style="background-color: rgb(51, 50, 50);">
+        <div >
+        <div class="justify-content-center text-center">
+        <h4 class="text-warning font-weight-bold mt-5">OUR</h4>
+        <h1 class="text-white my-3 font-weight-bold">CLIENT</h1>
+        </div>
+        <div class="row">
+          <div class="col-12 col-lg-4">
+            <div class="card card-background m-1 m-lg-5">
+              <div class="card-body text-center text-white">
+                <i class="fa fa-quote-left" style="font-size: 38px;" aria-hidden="true"></i>
+                <p class="pt-5 pb-4 mx-4 line-height-1"><i>The food was absolutely wonderful, from preparation to presentation, very pleasing. We especially
+                   enjoyed the special bar drinks, the cucumber/cilantro infused vodka martini and the K&P was great.
+                </i></p>
+                <h4 class="py-3 font-weight-bold">SELENA D</h4>
+                <h6 class="font-weight-bold mb-4 mb-lg-5">LAWYER</h6>
+              </div>
+            </div>
+          </div>   
+          <div class="col-12 col-lg-4">
+            <div class="card card-background m-1 m-lg-5 my-4 my-lg-0">
+              <div class="card-body text-center text-white">
+                <i class="fa fa-quote-left" style="font-size: 38px;" aria-hidden="true"></i>
+                <p class="pt-5 pb-4 mx-4 line-height-1"><i>A very friendly welcoming place to spend time. All personnel were very well trained,helpful and all done with a smile.
+                 Everything was handled with efficiency and attention to every detail was given.
+                </i></p>
+                <h4 class="py-3 font-weight-bold">RICHARD</h4>
+                <h6 class="font-weight-bold mb-4 mb-lg-5">ARCHITECT</h6>
+              </div>
+            </div>
+          </div>      
+          <div class="col-12 col-lg-4">
+            <div class="card card-background m-1 m-lg-5">
+              <div class="card-body text-center text-white">
+                <i class="fa fa-quote-left" style="font-size: 38px;" aria-hidden="true"></i>
+                <p class="pt-5 pb-4 mx-4 line-height-1"><i>Excellent eating experience.. from walking in the door and being greeted by employee, seated and drink order
+                 taken, was maybe 5 minutes. Meal was served hot and excellent taste. Server was very friendly.
+                </i></p>
+                <h4 class="py-3 font-weight-bold">CYNTHIA</h4>
+                <h6 class="font-weight-bold mb-4 mb-lg-5">DENTIST</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 text-center">
+          <button class="btn btn-warning font-weight-bolder btn-lg px-5 py-3 my-4" style="background-color: #ffd71b;">READ MORE</button>
+        </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Cards -->
+
+    <!-- Address -->
+    <address class="address-background">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 col-lg-5" >
+            <div class="card my-address-card">
+              <div class="card-body text-center">
+                <h6 class="text-warning font-weight-bold mt-5">FIND US</h6>
+                <h1 class="text-white font-weight-bold mt-3 mb-4">OUR ADDRESS</h1>
+                <div class="d-flex flex-row justify-content-center mt-5 mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-geo-alt-fill text-white" viewBox="0 0 16 16">
+                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                  </svg>
+                  <div class="ml-4">
+                  <pre class="text-white" style="font-size: 15px; ">Beverly Hills, Opp Ring Road</pre>
+                  <pre class="text-white" style="font-size: 15px; ">California, 669969</pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </address>
+
+    <!-- End of Address -->
+
+    <!-- Contact -->
+    <section class="my-email-section" id="Contact">
+      <div class="container-fluid p-4 p-lg-5">
+        <div class="row justify-content-center ">
+          <div class="col-12 col-md-5 text-center " >
+            <img src="https://d33wubrfki0l68.cloudfront.net/deafe47e0ea96b853fe7b4131a5674263f601ec2/1d342/assets/img/crown.png" width="64px" alt="">
+            <h2 class="my-4 mb-5 text-white">STAY UPDATED WITH DEALS</h2>
+            <form action="">
+              <div class="form-group">
+                <input type="email" placeholder="Email Address" class="form-control email-input">
+                <button type="submit" class="email-input-style mt-3 mt-lg-4 form-control font-weight-bold" type="submit">SUBMIT</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Contact -->
+    
+    <!-- Footer -->
+    <footer>
+      <div class="container-fluid p-5">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-6 text-center">
+            <ul class="list-unstyled " style="font-family: sans-serif;">
+              <li class="my-4"><a href="#Home" class="font-wheight-bold text-white text-decoration-none " style="font-size: 21px;">HOME</a></li>
+              <li class="my-4"><a href="#Menu" class="font-wheight-bold text-white text-decoration-none " style="font-size: 21px;">MENU</a></li>
+              <li class="my-4"><a href="#About" class="font-wheight-bold text-white text-decoration-none " style="font-size: 21px;">ABOUT</a></li>
+              <li class="my-4"><a href="#Contact" class="font-wheight-bold text-white text-decoration-none " style="font-size: 21px;">CONTACT</a></li>
+            </ul>
+            <ul class="list-inline" style="margin-top: 4rem;" >
+              <li class="list-inline-item text-white mx-3"><i class="fa fa-instagram" style="font-size: 27px;" aria-hidden="true"></i></li>
+              <li class="list-inline-item text-white mx-3 my-3 my-sm-0"><i class="fa fa-youtube" style="font-size: 27px;" aria-hidden="true"></i></li>
+              <li class="list-inline-item text-white mx-3"><i class="fa fa-twitter" style="font-size: 27px;" aria-hidden="true"></i></li>
+              <li class="list-inline-item text-white mx-3"><i class="fa fa-facebook" style="font-size: 27px;" aria-hidden="true"></i></li>
+            </ul>
+            <p class="text-white mt-5">&copy; 
+              <script>document.write(new Date().getFullYear())</script>
+              RANDOM RESTAURANT
+            </p>
+            <p class="text-white mt-3">DEVELOPED BY MOHAMMAD YOUSEFZADEH</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End of Footer -->
+
+    <!-- data-aos="zoom-in" data-aos-duration="1000" -->
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="vanilla-tilt.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
+
